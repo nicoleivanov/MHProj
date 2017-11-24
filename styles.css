@@ -21,7 +21,6 @@
   color: #353535;
   font-size: 1.2em;
   line-height: 1.5;
-  padding: 5px;
   /* background: #d0cfc5; */
   background: #f9f9f9;
 }
@@ -31,11 +30,17 @@
 }
 
 #banner {
-  border-bottom: 1px solid #efeaea
+  border-bottom: 1px solid #efeaea;
 }
 
-nav {
-  border-bottom: 1px solid #efeaea
+#myNav {
+  border-bottom: 1px solid #efeaea;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#brand {
+  font-size: 1.5em;
 }
  
 div ul {
@@ -57,13 +62,16 @@ nav a:hover {
 #brand {
   grid-area: brand;
 }
+
 #menu {
   grid-area: menu;
 }
+
 #search {
   grid-area: search;
   justify-self: center;
 }
+
 #cart {
   grid-area: cart;
   justify-self: center;
@@ -85,6 +93,11 @@ nav a:hover {
 #login {
   grid-area: login;
 }
+
+#carouselExampleIndicators {
+  margin: 0;
+}
+
 
 @media screen and (max-width: 499px) {
   .header-nested {
@@ -108,15 +121,12 @@ nav a:hover {
     font-size: 12px;
   }
 
-  #phone {
-    justify-self: left;
-  }
-
   .nav-nested {
     display: grid;
     grid-template-columns: 0.5fr 3fr 1fr 1fr;
     grid-template-areas:
-    "open brand search cart"
+    "open brand search cart";
+    align-items: center;
   }
   
    #menu {
@@ -165,7 +175,8 @@ nav a:hover {
     grid-gap: 20px;
     grid-template-columns: 4fr 6fr 1fr 1fr;
     grid-template-areas:
-    "brand menu search cart"
+    "brand menu search cart";
+    align-items: center;
   }
 
   #toggle-open {
