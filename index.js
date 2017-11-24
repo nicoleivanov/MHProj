@@ -26,19 +26,41 @@
 //   $("#banner").prependTo("#menu").remove();
 // }
 // $("#banner").prependTo("#menu").remove();
+
+
+// $(document).ready(function() {
+//   if($("#toggle-close").css("display") === "block") {
+//     $("#hello").insertBefore(".ul-nest");
+//   } else if($("#toggle-close").css("display") === "none") {
+//     $("#hello").insertBefore("#brand");
+//   }
+// })
+
+// $(window).resize(function() {
+//   if($("#toggle-close").css("display") === "block") {
+//     $("#hello").insertBefore(".ul-nest");
+//   } else if($("#toggle-close").css("display") === "none") {
+//     $("#hello").insertBefore("#brand");
+//   }
+// })
+
 $(document).ready(function() {
   if($("#toggle-close").css("display") === "block") {
-    $("#hello").prependTo("#menu");
+    $("#login").insertBefore(".ul-nest");
+    $("#phone").insertBefore(".ul-nest")
   } else if($("#toggle-close").css("display") === "none") {
-    $("#hello").prependTo(".header-nested");
+    $("#login").insertAfter("#sale");
+    $("#phone").insertBefore("#sale")
   }
 })
 
 $(window).resize(function() {
   if($("#toggle-close").css("display") === "block") {
-    $("#hello").insertBefore(".ul-nest");
+    $("#login").insertBefore(".ul-nest");
+    $("#phone").insertBefore(".ul-nest")
   } else if($("#toggle-close").css("display") === "none") {
-    $("#hello").insertBefore("#brand");
+    $("#login").insertAfter("#sale");
+    $("#phone").insertBefore("#sale")
   }
 })
 

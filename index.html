@@ -41,20 +41,19 @@
     </div>
   </div> -->
 <div class="wrapper">
-  <header id="banner">
-      <h1>Header</h1>
-      
+  <header id="banner" class="header-nested">
+    <div id="phone">Call Us: +123 123 456 789</div>
+    <div id="sale">SUMMER SALE! Get 10% off your order with code SUMMER17</div>
+    <div id="login">LOGIN
+        |
+      REGISTER</div>
   </header>
-     
   <nav id="nav" role="navigation">
-    <!-- you might also want to use a “×” -->
-    
-    <div class="header-nested">
-      <div id="hello">Hello</div>
-      <a id= "toggle-open" href="#menu">open</a>
+    <div class="nav-nested">
+      <a id="toggle-open" href="#menu">open</a>
       <div id="brand">Miss Lovely</div>
       <div id="menu">
-        <a id= "toggle-close" href="#">close</a>
+        <a id="toggle-close" href="#">X</a>
           <ul class ="ul-nest">
               <li>
                   <a href="#">Item 1</a>
@@ -72,22 +71,51 @@
                   <a href="#">Item 5</a>
               </li>
           </ul>
-      </div>
+      </div> <!-- end #menu -->
       <div id="search">Search</div>
       <div id="cart">Cart</div>
-
-    </div>
-
-    
+    </div> <!-- end .nav-nested -->
   </nav>
      
-  <section role="main">
-      <article>
-          <h2>Article</h2>
-          <p>Curabitur orci lacus, auctor ut facilisis nec, ultricies quis nibh. Phasellus id diam sollicitudin, malesuada turpis id, gravida erat. Maecenas placerat elit vel hendrerit convallis. Sed in mauris ut justo vulputate viverra feugiat ac dui. Fusce feugiat arcu in vehicula vehicula. Donec varius justo at nulla aliquet volutpat.</p> 
-          <p>Ut id rutrum eros. Nulla tristique, magna et mattis vulputate, mi eros suscipit turpis, nec bibendum turpis nunc feugiat sapien. Nunc arcu est, lacinia id diam quis, sagittis euismod neque. Nullam fringilla velit sed porta gravida. Proin eu vulputate libero. Ut a lacinia enim. Etiam venenatis mauris et orci tempor congue. Sed tempor eros et ultricies congue. Aenean sed efficitur orci. Nulla vel tempus mi.</p>
-          <p>Ut cursus suscipit augue, id sagittis nibh faucibus eget. Etiam suscipit ipsum eu augue ultricies, at rhoncus mi faucibus. In et tellus vitae leo scelerisque fringilla nec at nunc.</p>
-      </article>
+  <section>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="https://static.pexels.com/photos/265906/pexels-photo-265906.jpeg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>...</h3>
+            <p>...</p>
+          </div>
+        </div> <!-- end img1 -->
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://static.pexels.com/photos/5583/silver-macro-jewellery-jewelry.jpg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+              <h3>...</h3>
+              <p>...</p>
+          </div>
+        </div> <!-- end img2 -->
+        <div class="carousel-item">
+          <img class="d-block w-100" src="http://www.3printdimensions.ca/wp-content/uploads/2016/07/jennywulace.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>...</h3>
+            <p>...</p>
+          </div>
+        </div> <!-- end img3 -->
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> <!-- end carousel -->
   </section>
      
   <aside>
@@ -104,12 +132,6 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="./index.js"></script>
-    <script type="text/javascript">
-      if($(".toggle").css("display") === "auto") {
-        $("#banner").prependTo("#menu").remove();
-      }
-
-    </script>
   
 </body>
 
