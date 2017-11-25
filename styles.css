@@ -1,24 +1,11 @@
-/* .wrapper {
-  display: grid;
-  grid-template-columns: 1 fr;
-  border: 1px solid black;
-}
-
-.wrapper * {
-  border: 0.25px solid blue;
-}
-
-.wrapper > * {
-  border: 1px solid black;
-} */
-
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;
+  color: #636363;
 }
 
 .wrapper > * {
-  color: #353535;
+  color: #636363;
   font-size: 1.2em;
   line-height: 1.5;
   /* background: #d0cfc5; */
@@ -50,7 +37,7 @@ div ul {
 }
  
 div a {
-  color: #f09dec;
+  color: #636363;
   display: flex;
   justify-content: space-between
 }
@@ -61,6 +48,7 @@ nav a:hover {
 
 #brand {
   grid-area: brand;
+  color: #e0ac91;
 }
 
 #menu {
@@ -70,6 +58,7 @@ nav a:hover {
 #search {
   grid-area: search;
   justify-self: center;
+  color: #e0ac91;
 }
 
 #cart {
@@ -94,20 +83,20 @@ nav a:hover {
   grid-area: login;
 }
 
+#login a {
+  display: inline;
+}
+
 #carouselExampleIndicators {
   margin: 0;
 }
 
-
-@media screen and (max-width: 499px) {
-  .header-nested {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "sale";
-    justify-items: center;
-    font-size: 12px;
-  }
+#listings {
+  list-style: none;
+  margin: 2em;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
 }
 
 @media screen and (max-width: 799px) {
@@ -130,13 +119,14 @@ nav a:hover {
   }
   
    #menu {
-    position: fixed; /* or choose `absolute` depending on desired behavior*/
+    position: fixed;
     top: 0;
     bottom: 0;
     width: 300px;
     left: -340px;
     transition: transform .3s ease-in-out;
-    background: #136fd2;
+    background: white;
+    z-index: 100;
    }
 
    #menu:target {
@@ -164,11 +154,6 @@ nav a:hover {
     justify-items: center;
     font-size: 0.75em;
   }
-  
-
-  /* specific item styles */
-
-
 
   .nav-nested {
     display: grid;
