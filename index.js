@@ -64,6 +64,8 @@ $(window).resize(function() {
   }
 })
 
+$("footer ul li").prepend("<hr />")
+
 // $(document).ready(function() {
 //   $(window).resize(function() {
 //     if($(".toggle").css("display") === "none") {
