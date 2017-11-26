@@ -38,11 +38,9 @@ div ul {
  
 div a {
   color: #636363;
-  display: flex;
-  justify-content: space-between
 }
  
-nav a:hover {
+a:hover {
   text-decoration: none;
 }
 
@@ -91,16 +89,54 @@ nav a:hover {
   margin: 0;
 }
 
-#listings {
-  list-style: none;
-  margin: 2em;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+h2 {
+  text-align: center;
+  padding-top: 20px
 }
 
-@media screen and (max-width: 799px) {
+#listings {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 3em;
+}
 
+#listings > div {
+  background-color: white;
+  justify-items: center;
+  text-align: center;
+  padding: 15px 0px 20px 0;
+}
+
+
+#listings div {
+  text-align: center;
+}
+
+#listings a {
+  text-align: center;
+}
+
+#listings img {
+  width: 75%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: 15px;
+}
+
+
+
+
+
+@media screen and (max-width: 499px) {
+  
   .header-nested {
     display: grid;
     grid-template-columns: 1fr;
@@ -112,7 +148,7 @@ nav a:hover {
 
   .nav-nested {
     display: grid;
-    grid-template-columns: 0.5fr 3fr 1fr 1fr;
+    grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr;
     grid-template-areas:
     "open brand search cart";
     align-items: center;
@@ -142,10 +178,73 @@ nav a:hover {
     top: 0px;
     right: 5px;
   }
+
+  #listings {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 1em;
+  }
+
+}
+
+@media screen and (max-width: 949px) and (min-width: 500px) {
+
+  .header-nested {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "sale";
+    justify-items: center;
+    font-size: 12px;
+  }
+
+  .nav-nested {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr;
+    grid-template-areas:
+    "open brand search cart";
+    align-items: center;
+  }
+  
+   #menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    left: -340px;
+    transition: transform .3s ease-in-out;
+    background: white;
+    z-index: 100;
+   }
+
+   #menu:target {
+     transform: translateX(340px);
+  }
+
+  #toggle-close {
+    text-align: right;
+    display: block;
+    text-decoration: none;
+    font-size: 1em;
+    position: relative;
+    top: 0px;
+    right: 5px;
+  }
+
+  #listings {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 2em;
+  }
   
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
+
   .header-nested {
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
@@ -157,8 +256,8 @@ nav a:hover {
 
   .nav-nested {
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 4fr 6fr 1fr 1fr;
+    /* grid-gap: 20px; */
+    grid-template-columns: 5fr 4fr 0.5fr 0.5fr;
     grid-template-areas:
     "brand menu search cart";
     align-items: center;
