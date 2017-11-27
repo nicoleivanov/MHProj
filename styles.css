@@ -148,6 +148,20 @@ a:hover {
   bottom: 0;
 }
 
+/* .carousel-indicators li {
+  border: 2px solid #305288;
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.carousel-indicators .active {
+  background-color: #305288;
+} */
+
+
 #panelCap {
   text-align: left;
   top: auto;
