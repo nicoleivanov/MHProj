@@ -106,11 +106,6 @@ a:hover {
   margin: 0;
 }
 
-h2 {
-  text-align: center;
-  padding-top: 20px
-}
-
 .carousel-caption {
   color: #305288;
   font-size: 44px;
@@ -132,14 +127,13 @@ h2 {
   border-radius: 25px;
   color: white;
   background-color: #305288;
-  padding: 10px;
-  width: 152px;
+  padding: 10px 30px;
 }
 
 #carousel1 {
-  text-align: left;
-  top: auto;
-  bottom: 0;
+  text-align: right;
+  top: 0;
+  bottom: auto;
 }
 
 #carousel2 {
@@ -149,9 +143,9 @@ h2 {
 }
 
 #carousel3 {
-  text-align: right;
-  top: 0;
-  bottom: auto;
+  text-align: left;
+  top: auto;
+  bottom: 0;
 }
 
 #panelCap {
@@ -163,6 +157,14 @@ h2 {
 
 
 /* #listings styles */
+#weekly-specials {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
 #listings {
   display: grid;
   grid-gap: 30px;
@@ -197,11 +199,15 @@ figure {
 
 figcaption {
   font-size: 15px;
+  font-weight: 300;
+  padding: 5px 0;
 }
 
 .price {
   color: rgb(48, 82, 136);
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 5px 0;
 }
 
 .see-more {
@@ -242,10 +248,12 @@ hr {
   margin-bottom: 0.75em;
 }
 
-footer h3 {
+footer h6 {
   border-top: 2px solid #e0e0e0;
   padding: 12px 0;
   margin-bottom: 12px;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 #email, #submit {
@@ -293,7 +301,27 @@ footer h3 {
 /* Media queries */
 
 @media screen and (max-width: 599px) {
+
+  #brand {
+    font-size: 1.5em;
+  }
+
+  #search {
+    font-size: 1.5em;
+  }
+
+  #cart {
+    font-size: 1.5em;
+  }
   
+  #toggle-open {
+    font-size: 1.5em;
+  }
+
+  #weekly-specials {
+    font-size: 1.25em;
+  }
+
   .header-nested {
     display: grid;
     grid-template-columns: 1fr;
@@ -345,6 +373,20 @@ footer h3 {
     position: relative;
     top: 0px;
     right: 10px;
+  }
+
+  .carousel-caption p {
+    display: none;
+  }
+
+  .carousel-caption {
+    font-size: 1em;
+  }
+
+  #carousel3 {
+    text-align: left;
+    top: 0;
+    bottom: auto;
   }
 
    #listings {
@@ -436,6 +478,20 @@ footer h3 {
     position: relative;
     top: 0px;
     right: 10px;
+  }
+
+  .carousel-caption p {
+    display: none;
+  }
+
+  .carousel-caption {
+    font-size: 1em;
+  }
+
+  #carousel3 {
+    text-align: left;
+    top: 0;
+    bottom: auto;
   }
 
    #listings {
