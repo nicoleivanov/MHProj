@@ -65,7 +65,11 @@ a:hover {
 #cart {
   grid-area: cart;
   justify-self: center;
-  border-color: rgb(209, 209, 209)
+  border: 1px solid rgb(209, 209, 209)
+}
+
+.nav-nested div {
+  border: 1px solid rgb(209, 209, 209)
 }
 
 #toggle-open {
