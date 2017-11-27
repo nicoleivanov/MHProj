@@ -66,6 +66,11 @@ $(window).resize(function() {
 
 $("footer ul li").prepend("<hr />")
 
+
+$('<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>').prependTo(".footer-lis")
+
+
+
 // $(document).ready(function() {
 //   $(window).resize(function() {
 //     if($(".toggle").css("display") === "none") {

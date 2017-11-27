@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 1fr;
   color: #636363;
+  font-family: "Lato", sans-serif
 }
 
 .wrapper > * {
@@ -25,12 +26,7 @@
 
 #myNav {
   border-bottom: 1px solid #efeaea;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#brand {
-  font-size: 1.5em;
+  padding: 15px;
 }
  
 div ul {
@@ -50,6 +46,8 @@ a:hover {
 #brand {
   grid-area: brand;
   color: #e0ac91;
+  font-size: 2em;
+  font-weight:  700;
 }
 
 #menu {
@@ -59,16 +57,27 @@ a:hover {
 #search {
   grid-area: search;
   justify-self: center;
+  font-size: 1.5em;
+}
+
+#search i {
   color: #e0ac91;
 }
 
 #cart {
   grid-area: cart;
   justify-self: center;
+  font-size: 1.5em;
 }
 
 #toggle-open {
   grid-area: open;
+  justify-self: center;
+  font-size: 1.5em;
+}
+
+#toggle-open i {
+  color: #e0ac91;
 }
 
 #phone {
@@ -78,6 +87,8 @@ a:hover {
 #sale {
   grid-area: sale;
   text-align: center;
+  color: #305288;
+  font-weight: 700;
 }
 
 #login {
@@ -87,6 +98,8 @@ a:hover {
 #login a {
   display: inline;
 }
+
+
 
 /* Carousel styles */
 #carouselExampleIndicators {
@@ -99,24 +112,26 @@ h2 {
 }
 
 .carousel-caption {
-  color: rgb(48, 82, 136);
+  color: #305288;
+  font-size: 44px;
+  font-weight: 100;
+}
+
+.carouselCap2 {
+  font-weight: 700;
 }
 
 .carousel-caption p {
   color: #868686;
-}
-
-#carousel1 {
-  text-align: left;
-  top: auto;
-  bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .carousel-btn {
-  border-color: rgb(48, 82, 136);
+  border-color: #305288;
   border-radius: 25px;
   color: white;
-  background-color: rgb(48, 82, 136);
+  background-color: #305288;
   padding: 10px;
   width: 152px;
 }
@@ -135,9 +150,17 @@ h2 {
 
 #carousel3 {
   text-align: right;
+  top: 0;
+  bottom: auto;
+}
+
+#panelCap {
+  text-align: left;
   top: auto;
   bottom: 0;
 }
+
+
 
 /* #listings styles */
 #listings {
@@ -189,6 +212,7 @@ figcaption {
   width: 152px;
 }
 
+
 /* footer styles */
 footer {
   display: grid;
@@ -199,6 +223,14 @@ footer {
 
 footer li {
   font-size: 12px;
+}
+
+.social {
+  text-align: center;
+  border: 1px solid #797979;
+  padding: 9px 9px;
+  width: 37px;
+  border-radius: 50%;
 }
 
 input {
@@ -229,6 +261,11 @@ footer h3 {
   color: white;
 }
 
+#ccIcons img {
+  width: 200px;
+}
+
+
 /* boilerplate styles */
 #copyright {
   grid-area: copyright;
@@ -243,6 +280,7 @@ footer h3 {
 #boilerplate {
   background-color: #ececec;
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
   "copyright ccIcons";
@@ -282,10 +320,21 @@ footer h3 {
     transition: transform .3s ease-in-out;
     background: white;
     z-index: 100;
+    padding-left: 15px;
+    font-weight: 400;
+    font-size: 14px;
    }
 
    #menu:target {
      transform: translateX(340px);
+  }
+
+  #login {
+    padding-bottom: 10px;
+  }
+
+  #phone {
+    padding-bottom: 5px;
   }
 
   #toggle-close {
@@ -295,7 +344,7 @@ footer h3 {
     font-size: 1em;
     position: relative;
     top: 0px;
-    right: 5px;
+    right: 10px;
   }
 
    #listings {
@@ -316,9 +365,6 @@ footer h3 {
   #boilerplate {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas:
-    "copyright"
-    "ccIcons";
     grid-template-areas:
     "copyright"
     "ccIcons";
@@ -350,13 +396,13 @@ footer h3 {
 
   .nav-nested {
     display: grid;
-    grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr;
+    grid-template-columns: 0.5fr 4fr 0.5fr 0.5fr;
     grid-template-areas:
     "open brand search cart";
     align-items: center;
   }
   
-   #menu {
+  #menu {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -365,10 +411,21 @@ footer h3 {
     transition: transform .3s ease-in-out;
     background: white;
     z-index: 100;
+    padding-left: 15px;
+    font-weight: 400;
+    font-size: 14px;
    }
 
    #menu:target {
      transform: translateX(340px);
+  }
+
+  #login {
+    padding-bottom: 10px;
+  }
+
+  #phone {
+    padding-bottom: 5px;
   }
 
   #toggle-close {
@@ -378,7 +435,15 @@ footer h3 {
     font-size: 1em;
     position: relative;
     top: 0px;
-    right: 5px;
+    right: 10px;
+  }
+
+   #listings {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 1em;
   }
 
   #listings {
@@ -398,7 +463,7 @@ footer h3 {
 
   #boilerplate {
     display: grid;
-    grid-template-columns: repeat(1fr);
+    grid-template-columns: 1fr;
     grid-template-areas:
     "copyright"
     "ccIcons";
@@ -406,6 +471,15 @@ footer h3 {
     align-items: center;
     font-size: 12px;
   }
+
+  #copyright {
+    text-align: center
+  }
+
+  #ccIcons {
+    justify-self: center;
+  }
+      
 }
 
 @media screen and (min-width: 1000px) {
@@ -421,10 +495,14 @@ footer h3 {
 
   .nav-nested {
     display: grid;
-    grid-template-columns: 6fr 3fr 0.5fr 0.5fr;
+    grid-template-columns: 6fr 4fr 0.5fr 0.5fr;
     grid-template-areas:
     "brand menu search cart";
     align-items: center;
+  }
+
+  #menu {
+    font-size: 14px;
   }
 
   #toggle-open {
@@ -438,6 +516,11 @@ footer h3 {
   .ul-nest {
     display: flex;
     justify-content: space-between;
+    padding: 20px;
+  }
+
+  .ul-nest hr {
+    display: none;
   }
 
   /* .ul-nest {
